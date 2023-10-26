@@ -1,0 +1,55 @@
+.left_scrollbar_container{
+    width: 100%;
+    height: auto;
+    background-color: black;
+    color: white;
+}
+.scroller {
+    height: 650px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+  }
+.Menu{
+    width: 100%;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(62, 62, 62);
+    
+}
+.Menu>div{
+    padding: 8px;
+    width: 80%;
+    margin: auto;
+    border-radius: 10px;
+}
+.Menu>div:hover{
+    background-color: rgb(62, 62, 62);
+}
+.Menu>div>p{
+    margin-left: 20px;
+    margin-top: 1px;
+}
+.left_scrollbar_container>div:nth-child(3){
+    width: 100%;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.left_scrollbar_container>div:nth-child(3)>p{
+    padding: 5px;
+    width: 80%;
+    margin: auto;
+}
+.left_scrollbar_container>div:nth-child(3)>div{
+    padding: 5px;
+    width: 80%;
+    margin: auto;
+    color: rgb(0, 132, 255);
+}
+.left_scrollbar_container>div:nth-child(3)>div>div{
+    border: 1px solid gray;
+    padding: 5px;
+    height: 25px;
+    border-radius: 20px;
+}
