@@ -5,9 +5,11 @@ import Left_scrollbar from '../Component/Left_scrollbar'
 import Video from '../Mainpages/Video_content.jsx'
 import Shorts from './Shorts_content'
 import { AiOutlineClose } from "react-icons/ai";
+import { useNavigate } from 'react-router-dom'
 
 const Homepage = () => {
-  console.log(Video);
+  const router = useNavigate();
+
   return (
     <div id='Homepage_container'>
       <div><Header /></div>
@@ -39,8 +41,13 @@ const Homepage = () => {
               <div>
                 {/* 1st 6 elements */}
                 <div className='display-flex Utube_video' >
+
+                {/* onClick={()=> router("/singlepage/8888888") */}
+
+
                   {Video.slice(0, 6).map((video) => (
-                    <div style={{ color: "white" }} >
+                    <div style={{ color: "white" }} onClick={()=>router(`/singlepage/${video.id}`)} >
+                      {/* `/applewatch/${pro.id}` */}
                       <div>
                         <img src={video.image} className='image' ></img>
                       </div>
