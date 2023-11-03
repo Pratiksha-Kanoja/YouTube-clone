@@ -100,7 +100,7 @@ const Homepage = () => {
 
                 <div className='display-flex Utube_video' >
                   {Video.slice(6, 12).map((video) => (
-                    <div style={{ color: "white" }} >
+                    <div style={{ color: "white" }} onClick={()=>router(`/singlepage/${video.id}`)}>
                       <div>
                         <img src={video.image} className='image' ></img>
                       </div>
