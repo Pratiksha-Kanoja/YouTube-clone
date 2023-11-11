@@ -12,11 +12,11 @@ const Homepage = () => {
 
   return (
     <div id='Homepage_container'>
-      <div><Header /></div>
+      <div><Header/></div>
 
       <div className='display-flex Homepage_body'>
         <div>
-          <Left_scrollbar />
+          <Left_scrollbar home={true}/>
         </div>
         <div className='Body_right'>
           <div className='display-flex'>

@@ -1,0 +1,137 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#profile_container{
+    height: 1353px;
+    background-color: black;
+}
+.profile_body{
+    /* border: 2px solid red; */
+    justify-content: space-between;
+    padding-top: 80px;
+}
+.profile_body>div:nth-child(1){
+    width: 18%;
+    height: 650px;
+    position: sticky;
+    top:60px;
+}
+.profilebody_right{
+    width: 77%;
+    /* border: 2px solid blue; */
+    height: 1270px;
+    color: white;
+    margin-right: 30px;
+}
+.profilebody_right>div:nth-child(1){
+    height: 170px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.profilebody_right>div:nth-child(1)>div:nth-child(1){
+    width: 95px;
+    text-align: center;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 80px;
+    font-weight:500;
+    background-color: rgb(149,73,183);
+    margin-top: 20px;
+    height: 95px;
+}
+.profile_info{
+    /* border: 2px solid red; */
+    width: 87%;
+    height: 110px;
+    margin-top: 20px;
+}
+.profile_info>p:nth-child(1){
+    font-size: 40px;
+    font-weight: 700;
+}
+.profile_info>p:nth-child(2){
+    font-size: 13px;
+    margin-top: 3px;
+    color: gray;
+}
+.profile_info>div:nth-child(3){
+    /* border: 2px solid red; */
+    width: 30%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.profile_info>div:nth-child(3)>button{
+    width: 49%;
+    /* height: 30px; */
+    padding: 8px 10px 8px 10px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: rgb(47, 47, 47);
+    border-radius: 18px;
+}
+
+
+.profile_history{
+    border-bottom: 0.1px solid gray;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+.profile_history>p:nth-child(2){
+    color: rgb(191, 191, 191);
+    margin-top: 6px;
+    font-size: 13px;
+}
+.profile_history>div:nth-child(1){
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.profile_history>div:nth-child(1)>div>p{
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.profile_history>div:nth-child(1)>p{
+    color: rgb(48, 143, 237);
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+
+
+
+.profilehistory_video{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.profilehistory_video>div{
+    height: 200px;
+    width: 19%;
+    margin-bottom: 20px;
+}
+.profilehistory_video>div>div:nth-child(1){
+    height: 120px;
+}
+.profilehistory_video>div>p:nth-child(2){
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 600;
+    margin-top: 2px;
+}
+.profilehistory_video>div>p:nth-child(3){
+    font-size: 13px;
+    margin-top: 5px;
+    color: rgb(164, 164, 164);
+}
+.profilehistory_video>div>div:nth-child(4){
+    font-size: 13px;
+    color: rgb(164, 164, 164);
+}

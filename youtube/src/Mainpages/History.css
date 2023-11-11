@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.History_container{
+    height: auto;
+    background-color: black;
+}
+.history_body{
+    justify-content: space-between;
+    padding-top: 80px;
+}
+.history_body>div:nth-child(1){
+    width: 18%;
+    height: 650px;
+    position: sticky;
+    top:60px;
+}
+.historybody_middle{
+    width: 44%;
+    color: white;
+    height: auto;
+}
+.historybody_middle>p:nth-child(1){
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+.history_by_day{
+    height: auto;
+    margin-top: 40px;
+}
+.history_by_day>p:nth-child(1){
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.history_video{
+    margin-top: 10px;
+}
+.history_video>div{
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+.history_video>div>div:nth-child(1){
+    height: 150px;
+    width: 240px;
+}
+.history_video-info{
+    height: 150px;
+    width: 360px;
+}
+.history_video-info>p:nth-child(1){
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 2px;
+    margin-right: 50px;
+}
+.history_video-info>div:nth-child(2){
+    font-size: 13px;
+    color: rgb(183, 183, 183);
+    margin-top: 5px;
+}
+.history_video-info>div:nth-child(2)>p:nth-child(1){
+    margin-right: 5px;
+}
+.history_video-info>div:nth-child(2)>p:nth-child(3){
+    margin-left: 5px;
+}
+.history_video-info>p:nth-child(3){
+    font-size: 13px;
+    color: rgb(183, 183, 183);
+    margin-top: 5px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 10px;
+}
+
+
+
+.historybody_right{
+    width: 31%;
+    height: 650px;
+    color: white;
+    margin-right: 30px;
+    position: sticky;
+    top:60px;
+}
+.historybody_right>div{
+    height: 400px;
+    width: 300px;
+    margin-left: 50px;
+    margin-top: 100px;
+}
+.historybody_right>div>div:nth-child(1){
+    border-bottom: 2px solid gray;
+    width: 90%;
+    padding-bottom: 8px;
+}
+.historybody_right>div>div:nth-child(1)>input{
+    margin-left: 10px;
+    width: 220px;
+    background-color: black;
+    font-size: 14px;
+    border: none;
+    outline: none;
+}
+.historybody_right>div>div{
+    font-size: 14px;
+    font-weight: 700;
+    margin: 30px 0px;
+}
+.historybody_right>div>p{
+    margin-left: 35px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    color: rgb(180, 180, 180);
+}
