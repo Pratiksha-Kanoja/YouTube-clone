@@ -4,8 +4,10 @@ import { HiOutlineMenu ,HiDotsVertical} from "react-icons/hi";
 import { IoSearchOutline } from "react-icons/io5";
 import { RiMicLine } from "react-icons/ri";
 import { TbUserCircle } from "react-icons/tb";
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+    const router = useNavigate()
   return (
     <div className='Header-container display-flex'>
         <div className='display-flex'>
@@ -28,7 +30,7 @@ const Header = () => {
 
         <div className='display-flex'>
             <div><HiDotsVertical style={{fontSize:"24px"}}/></div>
-            <div className='display-flex'>
+            <div className='display-flex' onClick={()=>router("/login")}>
                 <TbUserCircle style={{fontSize:"25px"}}/>
                 <p>Sign in</p>
             </div>           
