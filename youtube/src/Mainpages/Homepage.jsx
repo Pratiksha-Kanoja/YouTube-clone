@@ -1,15 +1,33 @@
-import React from 'react'
-import './Homepage.css'
-import Header from '../Component/Header'
-import Left_scrollbar from '../Component/Left_scrollbar'
-import Video from '../Mainpages/Video_content.jsx'
+import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import api from '../Helpers/AxiosConfig.js'
+import toast from 'react-hot-toast'
+import Header from '../Component/Header.jsx'
+import Left_scrollbar from '../Component/Left_scrollbar.jsx'
 import Shorts from './Shorts_content'
 import { AiOutlineClose } from "react-icons/ai";
-import { useNavigate } from 'react-router-dom'
+import './Homepage.css'
 
 const Homepage = () => {
-  const router = useNavigate();
+    const[Video,setVideo]= useState([])
+    const router = useNavigate();
 
+    useEffect(()=>{
+        async function getAllproducts(){
+            try {
+                const {data} = await api.get('/video/get-all-video');
+                // console.log(data)
+                if(data.success){
+                    setVideo(data.Video_Content)
+                }
+            } catch (error) {
+                toast.error(error.data.message)
+            }
+        }
+        getAllproducts();
+    },[])
+
+    console.log(Video)
   return (
     <div id='Homepage_container'>
       <div><Header/></div>
@@ -46,7 +64,7 @@ const Homepage = () => {
 
 
                   {Video.slice(0, 6).map((video) => (
-                    <div style={{ color: "white" }} onClick={()=>router(`/singlepage/${video.id}`)} >
+                    <div style={{ color: "white" }} onClick={()=>router(`/singlepage/${video._id}`)} >
                       {/* `/applewatch/${pro.id}` */}
                       <div>
                         <img src={video.image} className='image' ></img>
@@ -54,7 +72,7 @@ const Homepage = () => {
                       <div className='video_info display-flex'>
 
                         <div className='video_info-left'>
-                          <img src={video.channel} alt="" />
+                          <img src={video.channel_logo} alt="" />
                         </div>
                         <div className='video_info-right'>
                           <p className='video_title'>{video.title}</p>
@@ -100,14 +118,14 @@ const Homepage = () => {
 
                 <div className='display-flex Utube_video' >
                   {Video.slice(6, 12).map((video) => (
-                    <div style={{ color: "white" }} onClick={()=>router(`/singlepage/${video.id}`)}>
+                    <div style={{ color: "white" }} onClick={()=>router(`/practice/${video._id}`)}>
                       <div>
                         <img src={video.image} className='image' ></img>
                       </div>
                       <div className='video_info display-flex'>
 
                         <div className='video_info-left'>
-                          <img src={video.channel} alt="" />
+                          <img src={video.channel_logo} alt="" />
                         </div>
                         <div className='video_info-right'>
                           <p className='video_title'>{video.title}</p>
@@ -127,11 +145,13 @@ const Homepage = () => {
               :
               <div>Loading...</div>}
           </div>
+
+
+          
         </div>
       </div>
 
     </div >
-
   )
 }
 

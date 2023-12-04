@@ -15,32 +15,27 @@
     border-radius: 5px;
     position: relative;
 }
-.register_container>div>p:nth-child(1){
-    font-size: 25px;
-    margin-bottom: 15px;
-    margin-top: 40px;
-}
-.register_container>div>fieldset{
-    margin-top: 30px;
-    border: 2px solid rgb(69, 114, 228);
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-.register_container>div>fieldset>legend{
-    margin-left: 10px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-.register_container>div>fieldset>input{
-    width: 90%;
+
+.register_container>div>div{
+    width: 20%;
     height: 40px;
-    margin-left: 10px;
-    font-size: 20px;
-    border: none;
-    outline: none;
+    margin: auto;
+}
+.register_container>div>div>img{
+    width: 100%;
+    height: 100%;
 }
 
-.register_container>div>input{
+.register_container>div>p:nth-child(2){
+    font-size: 25px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.register_form{
+    padding-top: 50px;
+}
+.register_form>input{
     border-radius: 5px;
     margin-bottom: 10px;
     width: 97%;
@@ -50,13 +45,13 @@
     font-size: 15px;
     font-weight: 500;
 }
-.register_container>div>div:nth-child(8){
+.register_form>div{
     width: 100%;
     display: flex;
     justify-content: flex-end;
     margin-top: 20px;
 }
-.register_container>div>div:nth-child(8)>button{
+.register_form>div>button{
     font-size: 13px;
     padding: 10px 20px;
     background-color: rgb(69, 114, 228);
@@ -67,6 +62,11 @@
     border-radius: 5px;
     width: 23%;
 }
+
+
+
+
+
 
 .register_container>div:nth-child(2){
     width: 30%;
