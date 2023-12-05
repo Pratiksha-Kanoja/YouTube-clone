@@ -14,57 +14,50 @@
     padding: 40px;
     border-radius: 5px;
 }
-.login_container>div>p:nth-child(1){
+.login_container>div>div{
+    width: 20%;
+    height: 40px;
+    margin: auto;
+}
+.login_container>div>div>img{
+    width: 100%;
+    height: 100%;
+}
+.login_container>div>p:nth-child(2){
     font-size: 30px;
     margin-bottom: 15px;
-    margin-top: 30px;
+    margin-top: 10px;
 }
-.login_container>div>fieldset{
-    margin-top: 30px;
-    border: 2px solid rgb(69, 114, 228);
+.login_form{
+    padding-top: 30px;
+}
+.login_form>input{
     border-radius: 5px;
     margin-bottom: 10px;
-}
-.login_container>div>fieldset>legend{
-    margin-left: 10px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-.login_container>div>fieldset>input{
-    width: 90%;
-    height: 40px;
-    margin-left: 10px;
-    font-size: 20px;
-    border: none;
-    outline: none;
-}
-.login_container>div>input:nth-child(4){
-    width: 96%;
-    height: 50px;
-    font-size: 15px;
-    outline: none;
-    margin-top: 10px;
-    border-radius: 5px;
+    width: 97%;
     border: 1px solid gray;
     padding-left: 10px;
-    margin-bottom: 10px;
+    height: 45px;
+    font-size: 15px;
+    font-weight: 500;
 }
-.login_container>div>p:nth-child(6){
+
+.login_form>p:nth-child(5){
     margin-top: 40px;
 }
-.login_container>div>div:nth-child(8){
+.login_form>div:nth-child(7){
     margin-top: 40px;
     display: flex;
     justify-content: space-between;
 }
-.login_container>div>div:nth-child(8)>button:nth-child(1){
+.login_form>div:nth-child(7)>div:nth-child(1){
     font-size: 13px;
     padding: 10px 5px;
     background-color: white;
     font-weight: 500;
     border: none;
 }
-.login_container>div>div:nth-child(8)>button:nth-child(1):hover{
+.login_form>div:nth-child(7)>div:nth-child(1):hover{
     background-color: rgb(244, 246, 248);
 }
 .Account_show {
@@ -95,7 +88,7 @@
 
 
 
-.login_container>div>div:nth-child(8)>button:nth-child(3){
+.login_form>div:nth-child(7)>button:nth-child(3){
     font-size: 13px;
     padding: 10px 20px;
     background-color: rgb(69, 114, 228);

@@ -7,11 +7,10 @@ import Register from "./Mainpages/Register";
 // import Profile from "./Mainpages/Profile";
 // import History from "./Mainpages/History";
 
-function App() {
+function App() { 
   return (
     <div>
       <Routes>
-          {/* <Route path="/" element={<Practice/>} /> */}
           <Route path="/" element={<Homepage/>} />
           <Route path="/singlepage/:id" element={<Singlepage/>} />
           <Route path="/login" element={<Login/>} />
@@ -19,7 +18,7 @@ function App() {
           {/* <Route path="/you" element={<Profile/>} />
           <Route path="/history" element={<History/>} /> */}
 
-          {/* <Route path="/practice/:id" element={<Practice/>} /> */}
+          {/* <Route path="/practice" element={<Practice/>} /> */}
       </Routes>
     </div>
   );

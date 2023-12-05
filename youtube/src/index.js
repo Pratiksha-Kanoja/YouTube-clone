@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-    <Toaster
+      <Toaster
         position="top-center"
         reverseOrder={false}
         gutter={8}
@@ -35,7 +35,7 @@ root.render(
           },
         }}
       />
-      <App />
+        <App />
     </BrowserRouter>
   </React.StrictMode>
 );

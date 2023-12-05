@@ -15,7 +15,7 @@ const Register = () => {
             const { data } = await api.post('/auth/register', { registerdata });
             if (data.success) {
                 toast.success(data.message);
-                // router('/login');
+                router('/login');
                 setRegisterData({ name: "", email: "", password: "" })
             }else {
                 toast.success(data.error)
