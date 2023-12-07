@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import api from '../Helpers/AxiosConfig.js'
 import toast from 'react-hot-toast'
@@ -7,10 +7,12 @@ import Left_scrollbar from '../Component/Left_scrollbar.jsx'
 import Shorts from './Shorts_content'
 import { AiOutlineClose } from "react-icons/ai";
 import './Homepage.css'
+import { AuthContext } from '../Context/AuthContext'
 
 const Homepage = () => {
     const[Video,setVideo]= useState([])
     const router = useNavigate();
+    const{state, Logout} = useContext(AuthContext)
 
     useEffect(()=>{
         async function getAllproducts(){
@@ -32,6 +34,8 @@ const Homepage = () => {
     <div id='Homepage_container'>
       <div><Header/></div>
 
+      
+
       <div className='display-flex Homepage_body'>
         <div>
           <Left_scrollbar home={true}/>
@@ -51,6 +55,8 @@ const Homepage = () => {
             <button>Trailers</button>
             <button>Movie musicals</button>
           </div>
+
+          <div style={{color:"white"}}>name:{state?.user?.name}</div>
 
           <div className='video_content'>
             {/* <iframe width="420" height="345" src="https://www.youtube.com/embed/0Iu5kQi8lns?autoplay=1&mute=1">

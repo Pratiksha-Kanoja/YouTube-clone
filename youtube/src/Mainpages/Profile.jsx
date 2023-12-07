@@ -1,14 +1,34 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../Component/Header'
 import Left_scrollbar from '../Component/Left_scrollbar'
 import './Profile.css'
 import { BiSolidUserAccount, BiLogoGoogle, BiLike, BiCut } from "react-icons/bi";
 import { LuHistory,LuClock } from "react-icons/lu";
-import Video from './Video_content';
 import { MdPlaylistPlay } from "react-icons/md";
 import { useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
+import api from '../Helpers/AxiosConfig';
 
 const Profile = () => {
+  const[Video,setVideo]= useState([])
+    const router = useNavigate();
+
+    useEffect(()=>{
+        async function getAllproducts(){
+            try {
+                const {data} = await api.get('/video/get-all-video');
+                // console.log(data)
+                if(data.success){
+                    setVideo(data.Video_Content)
+                }
+            } catch (error) {
+                toast.error(error.data.message)
+            }
+        }
+        getAllproducts();
+    },[])
+
+    console.log(Video)
   return (
     <div id='profile_container'>
       <Header />
@@ -17,12 +37,23 @@ const Profile = () => {
           <Left_scrollbar you={true}/>
         </div>
         <div className='profilebody_right'>
-          {/* Prrofile info */}
+
+
+
+
+
+          {/* Profile info */}
           <div>
             <div>P</div>
             <div className='profile_info'>
               <p>PRATIKSHA KANOJA</p>
               <p>Create a channel</p>
+
+
+
+
+
+              
               <div>
                 <button className='display-flex'>
                   <BiSolidUserAccount style={{ fontSize: "20px" }} />

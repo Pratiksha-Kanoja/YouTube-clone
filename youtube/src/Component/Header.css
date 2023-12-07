@@ -68,13 +68,70 @@
     margin-top: 4px;
     background-color: rgb(62, 62, 62);
 }
-
-.Header-container>div:nth-child(3){
+.header-right{
     width: 27%;
     height: 50px;
     color: white;
     justify-content: flex-end;
 }
+
+.youtube_headsignout{
+    display: flex;
+    width: 300px;
+}
+.youtube_headsignout>div:nth-child(3){
+    width: 40px;
+    height: 40px;
+    padding: 2px;
+    font-size: 33px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: blueviolet;
+    font-weight: bold;
+}
+.youtube_headsignout>button{
+    border: 1px solid gray;
+    width: 100px;
+    height: 40px;
+    color: blue;
+    border-radius: 30px;
+    padding: 6px;
+    margin-top: 4px;
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color: black;
+    font-size: 20px;
+}
+
+
+.youtube_headsignin{
+    justify-content: space-between;
+    display: flex;
+}
+.youtube_headsignin>div:nth-child(1){
+    width: 10%;
+    height: 25px;
+    color: white;
+    margin-top: 12px;
+}
+.youtube_headsignin>div:nth-child(2){
+    border: 1px solid gray;
+    width: 80%;
+    height: 23px;
+    color: rgb(0, 132, 255);
+    border-radius: 30px;
+    padding: 6px;
+    margin-top: 4px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.youtube_headsignin>div:nth-child(2)>p{
+    font-size: 15px;
+    font-weight: 700;
+    margin-left: 10px;
+    margin-top: 3px;
+}
+/* 
 .Header-container>div:nth-child(3)>div:nth-child(1){
     width: 10%;
     height: 25px;
@@ -82,21 +139,14 @@
     margin-top: 12px;
 }
 .Header-container>div:nth-child(3)>div:nth-child(2){
-    border: 1px solid gray;
-    width: 23%;
-    height: 23px;
-    color: rgb(0, 132, 255);
-    border-radius: 30px;
-    padding: 6px;
-    margin-top: 4px;
-    margin-right: 20px;
+    
 }
 .Header-container>div:nth-child(3)>div:nth-child(2)>p{
     font-size: 15px;
     font-weight: 700;
     margin-left: 10px;
     margin-top: 3px;
-}
+} */
 
 .display-flex{
     display: flex;

@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './Login.css'
 import { IoMdArrowDropdown } from "react-icons/io";
 import api from '../Helpers/AxiosConfig';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
+import { AuthContext } from '../Context/AuthContext';
 
 const Login = () => {
 
@@ -16,12 +17,16 @@ const Login = () => {
     }
     const Account = (account ? 'Account_show' : "Account_hide");
 
-    async function youtube_register(event) {
+    const { Login } = useContext(AuthContext)
+
+    async function youtube_register(event){
         event.preventDefault();
         if (registerdata.email && registerdata.password) {
             const { data } = await api.post('/auth/login', { registerdata });
             if (data.success) {
-                console.log(data, "Login data is here")
+                localStorage.setItem("my-token", JSON.stringify(data.token))
+                Login(data.user);
+                //console.log(data, "Login data is here")
                 toast.success("Login successfully.");
                 router('/');
                 setRegisterData({ email: "", password: "" })

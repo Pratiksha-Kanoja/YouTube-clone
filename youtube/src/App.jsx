@@ -4,8 +4,8 @@ import Homepage from "./Mainpages/Homepage";
 import Singlepage from "./Mainpages/Singlepage";
 import Login from "./Mainpages/Login";
 import Register from "./Mainpages/Register";
-// import Profile from "./Mainpages/Profile";
-// import History from "./Mainpages/History";
+import Profile from "./Mainpages/Profile";
+import History from "./Mainpages/History";
 
 function App() { 
   return (
@@ -15,8 +15,8 @@ function App() {
           <Route path="/singlepage/:id" element={<Singlepage/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/register" element={<Register/>}/>
-          {/* <Route path="/you" element={<Profile/>} />
-          <Route path="/history" element={<History/>} /> */}
+          <Route path="/you" element={<Profile/>} />
+          <Route path="/history" element={<History/>} />
 
           {/* <Route path="/practice" element={<Practice/>} /> */}
       </Routes>

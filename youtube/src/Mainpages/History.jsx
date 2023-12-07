@@ -1,11 +1,32 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './History.css'
 import Header from '../Component/Header'
 import Left_scrollbar from '../Component/Left_scrollbar'
-import Video from './Video_content'
 import {IoMusicalNoteSharp,IoSearchOutline,IoPauseOutline,IoSettingsOutline} from 'react-icons/io5'
 import { RiDeleteBin6Line } from "react-icons/ri";
+import toast from 'react-hot-toast'
+import api from '../Helpers/AxiosConfig'
+import { useNavigate } from 'react-router-dom'
 const History = () => {
+  const[Video,setVideo]= useState([])
+    const router = useNavigate();
+
+    useEffect(()=>{
+        async function getAllproducts(){
+            try {
+                const {data} = await api.get('/video/get-all-video');
+                // console.log(data)
+                if(data.success){
+                    setVideo(data.Video_Content)
+                }
+            } catch (error) {
+                toast.error(error.data.message)
+            }
+        }
+        getAllproducts();
+    },[])
+
+    console.log(Video)
   return (
     <div className='History_container'>
       <Header />
