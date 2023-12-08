@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import Practice from './Mainpages/Practice'
+// import Practice from './Mainpages/Practice'
 import Homepage from "./Mainpages/Homepage";
 import Singlepage from "./Mainpages/Singlepage";
 import Login from "./Mainpages/Login";

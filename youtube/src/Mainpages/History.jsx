@@ -9,8 +9,6 @@ import api from '../Helpers/AxiosConfig'
 import { useNavigate } from 'react-router-dom'
 const History = () => {
   const[Video,setVideo]= useState([])
-    const router = useNavigate();
-
     useEffect(()=>{
         async function getAllproducts(){
             try {

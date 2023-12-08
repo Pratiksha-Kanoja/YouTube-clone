@@ -1,5 +1,11 @@
 import axios from 'axios';
 
-const api = axios.create({baseURL : "http://localhost:8000/api/v1"})
+var BackendUrl = "http://localhost:8000/api/v1"
+
+if(process.env.MODE === "PRODUCTION"){
+    var BackendUrl = "https://youtube-clone-br6k.onrender.com/api/v1"
+}
+    const api = axios.create({baseURL: BackendUrl})
 
 export default api;
+

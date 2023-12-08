@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Header from '../Component/Header'
 import Left_scrollbar from '../Component/Left_scrollbar'
 import './Profile.css'
@@ -8,10 +8,12 @@ import { MdPlaylistPlay } from "react-icons/md";
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import api from '../Helpers/AxiosConfig';
+import { AuthContext } from '../Context/AuthContext';
 
 const Profile = () => {
   const[Video,setVideo]= useState([])
     const router = useNavigate();
+    const { state } = useContext(AuthContext)
 
     useEffect(()=>{
         async function getAllproducts(){
@@ -44,9 +46,9 @@ const Profile = () => {
 
           {/* Profile info */}
           <div>
-            <div>P</div>
+            <div>{state?.user?.name[0]}</div>
             <div className='profile_info'>
-              <p>PRATIKSHA KANOJA</p>
+              <p>{state?.user?.name}</p>
               <p>Create a channel</p>
 
 
@@ -57,7 +59,7 @@ const Profile = () => {
               <div>
                 <button className='display-flex'>
                   <BiSolidUserAccount style={{ fontSize: "20px" }} />
-                  <p style={{ fontSize: "13px",fontWeight:"600",marginLeft:"2px" }}>Switch account</p>
+                  <p style={{ fontSize: "13px",fontWeight:"600",marginLeft:"2px" }} onClick={()=>router('/login')}>Switch account</p>
                 </button>
                 <button className='display-flex'>
                   <BiLogoGoogle style={{ fontSize: "20px" }} />

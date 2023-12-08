@@ -37,7 +37,7 @@ const Header = () => {
                     <div className='youtube_headsignout'>
                         <BiVideoPlus style={{fontSize:"30px",marginRight:"20px",marginTop:"10px"}}/>
                         <FaRegBell style={{fontSize:"25px",marginRight:"20px",marginTop:"10px"}}/>
-                        <div>{state?.user?.name[0]}</div>
+                        <div onClick={()=>router('/you')}>{state?.user?.name[0]}</div>
                         <button onClick={Logout}>Logout</button>
                     </div>
                     :
