@@ -118,6 +118,70 @@ const Homepage = () => {
                   :
                   <div>Loading....</div>}
 
+                  {/* lg */}
+
+                  {Shorts.length ?
+                  <div className='Shorts_lg display-flex'>
+                    {Shorts.slice(0,3).map((shorts) => (
+                      <div>
+                        <div>
+                          <img src={shorts.image} className='image' />
+                        </div>
+                        <div>
+                          <p>{shorts.title}</p>
+                          <p>{shorts.view}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  :
+                  <div>Loading....</div>}
+
+                  {/* md */}
+
+                  {Shorts.length ?
+                  <div className='Shorts_md display-flex'>
+                    {Shorts.slice(0,2).map((shorts) => (
+                      <div>
+                        <div>
+                          <img src={shorts.image} className='image' />
+                        </div>
+                        <div>
+                          <p>{shorts.title}</p>
+                          <p>{shorts.view}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  :
+                  <div>Loading....</div>}
+
+                  {/* sm */}
+
+                  {Shorts.length ?
+                  <div className='Shorts_sm display-flex'>
+                    {Shorts.slice(0,1).map((shorts) => (
+                      <div>
+                        <div>
+                          <img src={shorts.image} className='image' />
+                        </div>
+                        <div>
+                          <p>{shorts.title}</p>
+                          <p>{shorts.view}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  :
+                  <div>Loading....</div>}
+
+
+
+
+
                 <div className='display-flex Utube_video' >
                   {Video.slice(6, 12).map((video) => (
                     <div style={{ color: "white" }} onClick={()=>router(`/practice/${video._id}`)}>
